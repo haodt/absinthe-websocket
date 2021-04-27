@@ -1,5 +1,6 @@
 import { Socket, Channel, SocketConnectOption } from "phoenix";
 
+const SOCKET_STATES = { connecting: 0, open: 1, closing: 2, closed: 3 };
 const DEFAULT_CHANNEL = "__absinthe__:control";
 const SERVER_SENT_DATA_EVENT = "subscription:data";
 
@@ -74,7 +75,7 @@ export default class AbsintheWebSocket {
   }
 
   get readyState() {
-    return this.socket.connectionState();
+    return SOCKET_STATES[this.socket.connectionState()];
   }
 
   receive = (message: {
