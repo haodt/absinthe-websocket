@@ -1,31 +1,31 @@
 {
-  "name": "@my-templates/sample-library",
+  "name": "@haodt/absinthe-websocket",
   "version": "1.1.1",
   "license": "Apache-2.0",
-  "author": "lopatnov",
-  "description": "Demonstrates a sample library template",
-  "homepage": "https://my-templates.github.io/TypeScript-Library/",
+  "author": "haodt",
+  "description": "Absinthe web socket implementation",
+  "homepage": "https://github.com/haodt/absinthe-websocket",
   "keywords": [
-    "TypeScript",
-    "JavaScript",
-    "library",
-    "typescript-library",
-    "javascript-library"
+    "typescript",
+    "graphql",
+    "absinthe",
+    "apollo",
+    "subscription"
   ],
-  "umdName": "sampleLibrary",
-  "libraryFile": "library",
-  "main": "dist/library.js",
-  "module": "dist/library.es.js",
-  "types": "dist/library.d.ts",
+  "umdName": "AbsintheSocket",
+  "libraryFile": "index",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/My-Templates/TypeScript-Library.git"
+    "url": "git+https://github.com/haodt/absinthe-websocket.git"
   },
   "bugs": {
-    "url": "https://github.com/My-Templates/TypeScript-Library/issues"
+    "url": "https://github.com/haodt/absinthe-websocket/issues"
   },
   "scripts": {
     "build": "rollup -c rollup.config.ts",
@@ -40,9 +40,11 @@
   "devDependencies": {
     "@lopatnov/rollup-plugin-uglify": "^2.1.0",
     "@types/jest": "^26.0.9",
+    "@types/phoenix": "^1.5.1",
     "@types/typescript": "^2.0.0",
     "jest": "^26.2.2",
     "jest-config": "^26.2.2",
+    "phoenix": "^1.5.8",
     "rollup": "^2.23.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
@@ -52,5 +54,8 @@
     "terser": "^5.0.0",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
+  },
+  "peerDependencies": {
+    "phoenix": "^1.5.8"
   }
 }
